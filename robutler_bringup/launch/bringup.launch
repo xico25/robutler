@@ -1,0 +1,23 @@
+<launch>
+    <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="-3.0"/>
+    <arg name="y_pos" default="1.0"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robutler_description)/urdf/robutler.urdf.xacro" />
+
+    <include file="$(find robutler_bringup)/launch/spawn.launch"/>
+    <!-- Launch robot state -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <!-- Launch rviz, loading configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="--display-config $(find robutler_bringup)/config/visualize.rviz" required="false"/>
+    <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering" output="screen"/>
+</launch>
+
+
+
+
+
+
+
+
