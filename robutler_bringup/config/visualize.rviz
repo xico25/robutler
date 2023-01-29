@@ -9,8 +9,7 @@ Panels:
         - /Grid1
         - /RobotModel1
         - /Image1
-        - /LaserScan1
-        - /Map1
+        - /PoseArray1
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz/Selection
@@ -181,11 +180,62 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /move_base/DWAPlannerROS/global_plan
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Arrow Length: 0.30000001192092896
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Queue Size: 10
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -209,7 +259,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 29.495319366455078
+      Distance: 18.12787437438965
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -217,17 +267,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.5832639336585999
-        Y: -0.21521688997745514
-        Z: 0.35522693395614624
+        X: -5.661459922790527
+        Y: -0.32160985469818115
+        Z: 0.9908818602561951
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.4453973770141602
+      Pitch: 1.5303972959518433
       Target Frame: <Fixed Frame>
-      Yaw: 6.183582782745361
+      Yaw: 6.243584156036377
     Saved: ~
 Window Geometry:
   Displays:
@@ -247,5 +297,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 2153
-  Y: 170
+  X: 2014
+  Y: 186

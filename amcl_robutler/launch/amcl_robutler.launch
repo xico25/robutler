@@ -4,7 +4,7 @@
   <arg name="map_file" default="$(find robutler_navigation)/maps/casa/map2.yaml"/>
 
   <!-- <arg name="map_file" default="$(find turtlebot_tutorials)/maps/map1.yaml"/> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> -->
 
   <!-- Arguments -->
   <arg name="scan_topic"     default="scan"/>
