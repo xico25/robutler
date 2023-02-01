@@ -2,12 +2,12 @@
     <!-- Arguments -->
 
     <arg name="laser_scan_topic" default="/scan"/>
-    <arg name="initial_pose_x" default="0.0"/>
-    <arg name="initial_pose_y" default="0.0"/>
+    <arg name="initial_pose_x" default="-6.0"/>
+    <arg name="initial_pose_y" default="-0.5"/>
     <arg name="initial_pose_a" default="0.0"/>
 
     <!-- Map server -->
-    <arg name="map_file" default="$(find robutler_navigation)/maps/casa/map2.yaml"/>
+    <arg name="map_file" default="$(find robutler_navigation)/maps/casa/apartamento.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
     </node>
 
