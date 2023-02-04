@@ -11,24 +11,24 @@ def movebase_client(user_choice):
     goal = MoveBaseGoal()
     goal.target_pose.header.frame_id = "map"
     goal.target_pose.header.stamp = rospy.Time.now()
-    bedroom = (0.17,3.53,1)
-    bathroom = (0.17,3.53,1)
-    gym = (0.17,3.53,1)
+    office = (0.17,3.53,1)
+    midbedroom = (-2.72,3.75,1)
+    bigbedroom = (-6.10,3.00,1)
     kitchen = (0.17,3.53,1)
 
     
     if user_choice=="1":
-        goal.target_pose.pose.position.x = bedroom[0]
-        goal.target_pose.pose.position.y = bedroom[1]
-        goal.target_pose.pose.orientation.w = bedroom[2]
+        goal.target_pose.pose.position.x = office[0]
+        goal.target_pose.pose.position.y = office[1]
+        goal.target_pose.pose.orientation.w = office[2]
     elif user_choice=="2":
-        goal.target_pose.pose.position.x = bathroom[0]
-        goal.target_pose.pose.position.y = bathroom[1]
-        goal.target_pose.pose.orientation.w = bathroom[2]
+        goal.target_pose.pose.position.x = midbedroom[0]
+        goal.target_pose.pose.position.y = midbedroom[1]
+        goal.target_pose.pose.orientation.w = midbedroom[2]
     elif user_choice=="3":
-        goal.target_pose.pose.position.x = kitchen[0]
-        goal.target_pose.pose.position.y = kitchen[1]
-        goal.target_pose.pose.orientation.w = kitchen[2]
+        goal.target_pose.pose.position.x = bigbedroom[0]
+        goal.target_pose.pose.position.y = bigbedroom[1]
+        goal.target_pose.pose.orientation.w = bigbedroom[2]
     elif user_choice=="4":
         goal.target_pose.pose.position.x = gym[0]
         goal.target_pose.pose.position.y = gym[1]
@@ -38,6 +38,15 @@ def movebase_client(user_choice):
         goal.target_pose.pose.position.x = float(input("x="))
         goal.target_pose.pose.position.y = float(input("y="))
         goal.target_pose.pose.orientation.w = float(input("w="))
+    elif user_choice=="6":
+        goal.target_pose.pose.position.x = bedroom[0]
+        goal.target_pose.pose.position.y = bedroom[1]
+        goal.target_pose.pose.orientation.w = bedroom[2]
+        goal.target_pose.pose.position.x = midbedroom[0]
+        goal.target_pose.pose.position.y = midbedroom[1]
+        goal.target_pose.pose.orientation.w = midbedroom[2]
+        
+
 
     else:
         print("Choose Another Location")
@@ -56,7 +65,7 @@ if __name__ == '__main__':
    
     while True: 
         try:
-            print("Choose your location!(To enter coords mode type 5)\n1)bedroom\n2)bathroom\n3)kitchen\n4)gym\n5)coordinates")
+            print("Choose your location!(To enter coords mode type 5)\n1)office\n2)midbedroom\n3)kitchen\n4)gym\n5)coordinates\n6)Navigation")
             user_choice=input()
             if user_choice=="e":
                 break
