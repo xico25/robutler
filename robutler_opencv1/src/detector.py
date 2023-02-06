@@ -71,6 +71,7 @@ class YoloV7:
         if detections:
             detections = detections[0]
         return detections
+       
 
 
 class Yolov7Publisher:
