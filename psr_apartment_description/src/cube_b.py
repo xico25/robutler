@@ -16,13 +16,13 @@ package_path = rospack.get_path('psr_apartment_description') + '/description/mod
 
 #Add here mode poses
 placements = []
-placements.append({'pose':Pose(position=Point(x=-5.69, y=4.37, z=0.6), orientation=Quaternion(x=0,y=0,z=0,w=1)),
-              'room':'large_bedroom', 'place': 'bed'})
-placements.append({'pose':Pose(position=Point(x=-7.33, y=5.29, z=0.58), orientation=Quaternion(x=0,y=0,z=0,w=1)),
-              'room':'large_bedroom', 'place': 'bedside_cabinet'})
+placements.append({'pose':Pose(position=Point(x=-1.60, y=3.75, z=0.375), orientation=Quaternion(x=0,y=0,z=0,w=1)),
+              'room':'mid_bedroom', 'place': 'table'})
 
 
-model_names = ['sphere_v']
+
+
+model_names = ['cube_b']
 
 # Add here several models. All should be added to the robutler_description package
 model_name = random.choice(model_names)

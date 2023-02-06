@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from typing import List, Union
-
+import rospy
 
 def get_random_color(seed):
     gen = np.random.default_rng(seed)
@@ -12,6 +12,10 @@ def get_random_color(seed):
 
 def draw_detections(img: np.array, bboxes: List[List[int]], classes: List[int],
                     class_labels: Union[List[str], None]):
+
+    if len(bboxes) == 0:
+        print("No object detected")
+        return img
     for bbox, cls in zip(bboxes, classes):
         x1, y1, x2, y2 = bbox
 
@@ -29,5 +33,10 @@ def draw_detections(img: np.array, bboxes: List[List[int]], classes: List[int],
                 img, label, (x_text, y_text), cv2.FONT_HERSHEY_SIMPLEX,
                 0.5, color, 1, cv2.LINE_AA
             )
-
+            print(label)
+            
+            
+            
+        
+    
     return img
