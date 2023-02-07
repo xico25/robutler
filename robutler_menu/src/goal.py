@@ -13,9 +13,9 @@ def movebase_client(user_choice):
     goal.target_pose.header.stamp = rospy.Time.now()
     office = (0,3,1)
     midbedroom = (-2.72,3.75,1)
-    bigbedroom = (-6.10,3.00,1)
-    kitchen = (0.17,3.53,1)
-    livingroom =(-2.05,-3,70,0)
+    bigbedroom = (-7.23,4.03,1)
+    kitchen = (-3.64,-0.96,1)
+    livingroom =(-2.05,-3,70,1)
 
     
     if user_choice=="1":
@@ -45,7 +45,24 @@ def movebase_client(user_choice):
         goal.target_pose.pose.position.y = float(input("y="))
         goal.target_pose.pose.orientation.w = float(input("w="))
 
-        
+    elif user_choice=="5":     
+        goal.target_pose.pose.position.x = livingroom[0]
+        goal.target_pose.pose.position.y = livingroom[1]
+        goal.target_pose.pose.orientation.w = livingroom[2]  
+    elif user_choice=="11":
+        goal.target_pose.pose.position.x = float(-5.557)
+        goal.target_pose.pose.position.y = float(-1.87)
+        goal.target_pose.pose.orientation.x = 0.0
+        goal.target_pose.pose.orientation.y = 0.0
+        goal.target_pose.pose.orientation.z = 1
+        goal.target_pose.pose.orientation.w = 0
+    elif user_choice=="12":
+        goal.target_pose.pose.position.x = float(-6.64)
+        goal.target_pose.pose.position.y = float(-4.12)
+        goal.target_pose.pose.orientation.x = 0.0
+        goal.target_pose.pose.orientation.y = 0.0
+        goal.target_pose.pose.orientation.z = 1
+        goal.target_pose.pose.orientation.w = 0
 
 
     else:

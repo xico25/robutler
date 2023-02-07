@@ -21,7 +21,7 @@ class CameraNode:
         
             k = cv2.waitKey(1)
             if k == ord("p"):
-                filename = "/home/francisco/catkin_ws/src/robutler/images/image_" + str(rospy.get_rostime().to_sec()) + ".jpg"
+                filename = "/home/francisco/catkin_ws/src/robutler/Images/image_" + str(rospy.get_rostime().to_sec()) + ".jpg"
                 cv2.imwrite(filename, cv_image)
                 print("Image saved:", filename)
             elif k == ord("e"):
