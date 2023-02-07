@@ -44,6 +44,11 @@ def movebase_client(user_choice):
         goal.target_pose.pose.position.x = float(input("x="))
         goal.target_pose.pose.position.y = float(input("y="))
         goal.target_pose.pose.orientation.w = float(input("w="))
+    elif user_choice=="11":
+        goal.target_pose.pose.position.x = -5,75
+        goal.target_pose.pose.position.y = -1,9
+        goal.target_pose.pose.orientation.w = 1
+    
 
         
 
